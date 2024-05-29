@@ -3,7 +3,11 @@ Il mare e la transizione verde (Grandi Sfide - Energia). Maggiori informazioni a
 
 Durante la stesura del report finale è stata necessaria la programmazione di diversi algorirmi al fine di valutare al meglio i diversi mix energetici.
 
-### MATLAB
-> Sono stati scritti 3 diversi programmi:
+## MATLAB
 
+Sono stati scritti 3 diversi programmi:
+
+- Programma per approssimare la produzione di potenza della pala eolica
+- Programma per approssimare la produzione di potenza del *wave energy converter*
+- Programma per il calcolo dell'energia accumulata dalle batterie
 
