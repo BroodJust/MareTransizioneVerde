@@ -16,7 +16,7 @@ Sono in seguito riportati i programmi usati per la modellazione energetica delle
   con l'obbiettivo limitare le quote di energia persa.
 
 ## DOCUMENTAZIONE
-I file .csv relativi alle prestazioni delle pale eoliche sono consultabili presso: [GitHub/tubine-models](https://github.com/NREL/turbine-models).
+I file .csv relativi alle prestazioni delle pale eoliche sono consultabili presso: [NREL/tubine-models](https://github.com/NREL/turbine-models).
 
 I dati della risorsa solare sono scaricabili presso: [PVGIS 5.2](https://re.jrc.ec.europa.eu/pvg_tools/en/)
 
