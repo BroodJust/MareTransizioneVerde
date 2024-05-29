@@ -4,16 +4,16 @@ Il mare e la transizione verde (Grandi Sfide - Energia). Maggiori informazioni s
 Sono in seguito riportati i programmi usati per la modellazione energetica delle isole di Tahiti(FR) e San Pietro(IT).
 
 ## MATLAB
-La cartella contiene:
-- `eolico`, approssimazione della potenza prodotta dalla pala eolica.
+La cartella contiene i seguenti script.
+- [eolico](MATLAB/eolico): approssimazione della potenza prodotta dalla pala eolica.
   Tramite la curva di potenza è stato possibile interpolare i dati del vento ed ottenere una approssimazione della
   potenza prodotta ogni ora. 
 
-- `wec`, approssimazione della potenza prodotta dal _wave energy converter_.
+- [wec](MATLAB/wec): approssimazione della potenza prodotta dal _wave energy converter_.
   Tramite la _power matrix_ è stato possibile interpolare i dati relativi al moto ondoso ed ottenere un'approssimazione della
   potenza prodotta ogni ora
 
-- `accumulo`, accumulo dell'energia non consumata. Tramite un algoritmo si è modellato un modello di accumulo energetico
+- [accumulo](MATLAB/accumulo), accumulo dell'energia non consumata. Tramite un algoritmo si è modellato un modello di accumulo energetico
   con l'obbiettivo limitare le quote di energia persa.
 
 ## DOCUMENTAZIONE
