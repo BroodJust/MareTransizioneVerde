@@ -4,7 +4,7 @@ Il mare e la transizione verde (Grandi Sfide - Energia). Maggiori informazioni s
 Sono in seguito riportati i programmi usati per la modellazione energetica delle isole di Tahiti(FR) e San Pietro(IT).
 
 ## MATLAB
-- Approssimazione della potenza prodotta dalla pala eolica:
+- `MATLAB/accumulo` Approssimazione della potenza prodotta dalla pala eolica:
   tramite la curva di potenza è stato possibile interpolare i dati del vento ed ottenere una approssimazione della
   potenza prodotta ogni ora 
 
