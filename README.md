@@ -7,7 +7,10 @@ Durante la stesura del report finale è stata necessaria la programmazione di di
 
 Sono stati scritti 3 diversi programmi:
 
-- Programma per approssimare la produzione di potenza della pala eolica
-- Programma per approssimare la produzione di potenza del *wave energy converter*
-- Programma per il calcolo dell'energia accumulata dalle batterie
+1. Programma per approssimare la produzione di potenza della pala eolica
+2. Programma per approssimare la produzione di potenza del *wave energy converter*
+3. Programma per il calcolo dell'energia accumulata dalle batterie
 
+## DOCUMENTAZIONE
+I file .csv relativi alle pale eoliche sono consultabili presso:
+https://nrel.github.io/turbine-models/
