@@ -11,15 +11,15 @@ prod = table2array(prod);
 %% algoritmo di accumulo 
 
 %grandezze dell'accumulatore        
-SOC=zeros(1,length(prod));      %stato di carica
-SOC(1)=0;                       %stato di carica iniziale 
+SOC=zeros(1,length(prod));      %stato di carica [%]
+SOC(1)=0;                       %stato di carica iniziale [%]
 Ebess=10;                       %capacità di carica [MWh]
 ebess=0;                        %carica batteria [MWh]
-eta_car=0.85;                   %efficienza carica
-eta_scar=0.85;                  %efficienza scarica
+eta_car=0.85;                   %efficienza carica [%]
+eta_scar=0.85;                  %efficienza scarica [%]
 V=10;                           %capacità accumulatore [MWh]
-Prod_DSL=zeros(1,length(prod)); %produzione diesel finale 
-P_medh=zeros(1,length(prod));   %potenza media oraria scamb        
+Prod_DSL=zeros(1,length(prod)); %produzione diesel finale [MWh]
+P_medh=zeros(1,length(prod));   %potenza media oraria scamb [MW]     
 
 %primo step iterazione
 if prod(1)<0
@@ -66,12 +66,30 @@ end
 SOC=SOC';
 P_medh=P_medh';
 Prod_DSL= Prod_DSL';
+
+%ipotesi: non si limita la quantità di energia che può entrare nella
+%batteria -> la carica oraria ebess[MWh] corrisponde a pbess[MW].
+
+%potenza fornita o prelevata ogni ora
+pbess=zeros(1,length(prod));
+%cicli delle batterie, si conteggia solo la fase di carica
+ncicli=0;
+for i=2:length(prod)
+    pbess(i)=(SOC(i)-SOC(i-1))*Ebess;
+    if pbess(i)>0
+        ncicli=ncicli+((pbess(i))/Ebess);
+    end
+end
+ncicli=round(ncicli,3);
+
 %% scrittura dei risutati
 t = table(SOC,Prod_DSL);
 writetable(t,FILE,"sheet","matlab","Range","B1");
 writematrix(max(P_medh),FILE,"sheet","matlab","Range","I4");
-
+writematrix(ncicli,FILE,"sheet","matlab","Range","I7");
 
 Message="DONE!"
+
+
 
 
