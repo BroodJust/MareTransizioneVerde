@@ -4,17 +4,22 @@ Il mare e la transizione verde (Grandi Sfide - Energia). Maggiori informazioni s
 Sono in seguito riportati i programmi usati per la modellazione energetica delle isole di Tahiti(FR) e San Pietro(IT).
 
 ## MATLAB
-La cartella contiene i seguenti script.
-- [eolico](MATLAB/eolico): approssimazione della potenza prodotta dalla pala eolica.
-  Tramite la curva di potenza è stato possibile interpolare i dati del vento ed ottenere una approssimazione della
+La cartella contiene i seguenti script:
+- [Eolico](MATLAB/eolico): approssimazione della potenza prodotta dalla pala eolica.
+  Tramite la curva di potenza è stato possibile interpolare i dati relativi al vento ed ottenere un'andamento della
   potenza prodotta ogni ora. 
 
-- [wec](MATLAB/wec): approssimazione della potenza prodotta dal _wave energy converter_.
-  Tramite la _power matrix_ è stato possibile interpolare i dati relativi al moto ondoso ed ottenere un'approssimazione della
-  potenza prodotta ogni ora
+- [Wec](MATLAB/wec): approssimazione della potenza prodotta dal _wave energy converter_.
+  Tramite la _power matrix_ è stato possibile interpolare i dati relativi al moto ondoso ed ottenere un'andamento della
+  potenza prodotta ogni ora.
 
-- [accumulo](MATLAB/accumulo), accumulo dell'energia non consumata. Tramite un algoritmo si è modellato un modello di accumulo energetico
+- [Accumulo](MATLAB/accumulo): accumulo dell'energia non consumata. Tramite un algoritmo si è modellato un modello di accumulo energetico
   con l'obbiettivo limitare le quote di energia persa.
+
+## PYTHON
+La cartella contiene un ulteriore script per l'analisi eolica:
+- [WindPowerAnalysis](PYTHON/eolico): approssimazione della potenza prodotta dalla pala eolica.
+  Tramite una funzione a tratti si approssima l'andamento della potenza con un polinomio di terzo grado.   
 
 ## DOCUMENTAZIONE
 I file .csv relativi alle prestazioni delle pale eoliche sono consultabili presso: [NREL/tubine-models](https://github.com/NREL/turbine-models).
