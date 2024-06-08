@@ -2,22 +2,22 @@
 %%% DI ACCUMULO ENERGETICO DEL MODELLO 
 
 %% apro i file .csv
-clc; clear all -except prod;
+clc; clear all;
 FILE="FinalTabSanpietro.xlsx";
 %lettura dei dati dal file specificato sopra
 prod = readtable(FILE,"sheet","FinalTab","Range","M2:M8761");
 prod = table2array(prod);
 
 %% algoritmo di accumulo 
-
+n=8;
 %grandezze dell'accumulatore        
 SOC=zeros(1,length(prod));      %stato di carica [%]
 SOC(1)=0;                       %stato di carica iniziale [%]
-Ebess=10;                       %capacità di carica [MWh]
+Ebess=n;                                   %capacità di carica [MWh]
 ebess=0;                        %carica batteria [MWh]
-eta_car=0.85;                   %efficienza carica [%]
+eta_car=0.85;                   %efficienza carica [%]  approx per difetto  
 eta_scar=0.85;                  %efficienza scarica [%]
-V=10;                           %capacità accumulatore [MWh]
+V=n;                                       %capacità accumulatore [MWh]
 Prod_DSL=zeros(1,length(prod)); %produzione diesel finale [MWh]
 P_medh=zeros(1,length(prod));   %potenza media oraria scamb [MW]     
 
