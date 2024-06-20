@@ -27,3 +27,13 @@ I file .csv relativi alle prestazioni delle pale eoliche sono consultabili press
 I dati della risorsa solare sono scaricabili presso: [PVGIS 5.2](https://re.jrc.ec.europa.eu/pvg_tools/en/)
 
 I dati della risorsa eolica e marina sono scaricabili presso: [ERA5](https://climate.copernicus.eu/climate-reanalysis)
+
+## IMMAGINI
+<p align="center">
+  <img src="/IMMAGINI/Confronto.png" height="400" width="560" />
+  <img src="/IMMAGINI/PM.png" height="400" width="560"/>
+  <img src="/IMMAGINI/SOC.png" height="400" width="560" />
+</p>
+
+
+
